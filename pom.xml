@@ -15,7 +15,7 @@
 	<description>Project</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 
 	<dependencies>
@@ -140,6 +140,10 @@
     	<artifactId>javax.mail</artifactId>
     	<version>1.16.18</version>
 	  </dependency> -->
+	  <dependency>
+		  <groupId>org.postgresql</groupId>
+		  <artifactId>postgresql</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
