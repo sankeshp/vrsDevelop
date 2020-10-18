@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -152,7 +155,7 @@ public class MainController {
 		System.out.println("email "+u_email+" pwd "+u_password);
 		try {
 			details = service.validateUser(u_email, u_password);
-		} catch (NoResultException e) {
+		} catch (EmptyResultDataAccessException e) {
 			System.out.println("err in controller " + e);
 			map.addAttribute("mesg", "Invalid Login Pls retry ....");
 		}
@@ -183,7 +186,13 @@ public class MainController {
 	public String processRegistrationPage(Users u,RedirectAttributes flashMap)
 	{
 		System.out.println("in process add user "+u);
+		try {
 		flashMap.addFlashAttribute("mesg", service.registerUsers(u));
+		} catch (DataIntegrityViolationException e) {
+			System.out.println("err in controller " + e);
+			flashMap.addFlashAttribute("msg", "Invalid Data Pls retry ....");
+			return "redirect:/main/registration";
+		}
 		return "redirect:/main/login";
 	}
 	

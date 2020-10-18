@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Registration</title>
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/main/navigation.jsp" />
-In Registration
+<h3 align="center">${requestScope.msg}</h3><br/>
 <!-- <form method="post">
 
 		<table>
@@ -100,7 +100,7 @@ In Registration
             </div>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="text" id="inputMode" name="u_mode" class="form-control" placeholder="User Mode" required="required" autofocus="autofocus" value="user">
+                <input type="text" id="inputMode" name="u_mode" class="form-control" placeholder="User Mode" required="required" autofocus="autofocus" value="user" readOnly>
                 <label for="inputMode">User Mode</label>
               </div>
             </div>

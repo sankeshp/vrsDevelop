@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Booking Form</title>
 <script>
 function demo()
 {
@@ -86,37 +86,37 @@ date:<%= (new java.util.Date())%>
           <form method="post">
           <div class="form-group">
               <div class="form-label-group">
-                <input type="date" id="mydate" name="o_date" class="form-control"  required="required" autofocus="autofocus">
+                <input type="date" id="mydate" name="o_date" class="form-control"  required="required" autofocus="autofocus" readOnly>
                 <label for="inputSDate">Current Date</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="date" id="inputSDate" name="o_start_time" class="form-control" value="${sessionScope.start_date}" required="required" autofocus="autofocus">
+                <input type="date" id="inputSDate" name="o_start_time" class="form-control" value="${sessionScope.start_date}" required="required" autofocus="autofocus" readOnly>
                 <label for="inputSDate">Start Date</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="date" id="inputEDate" name="o_end_time" class="form-control" value="${sessionScope.end_date}" required="required" autofocus="autofocus">
+                <input type="date" id="inputEDate" name="o_end_time" class="form-control" value="${sessionScope.end_date}" required="required" autofocus="autofocus" readOnly>
                 <label for="inputEDate">End Date</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="number" id="tprice" name="o_total_price" class="form-control" required="required" autofocus="autofocus">
+                <input type="number" id="tprice" name="o_total_price" class="form-control" required="required" autofocus="autofocus" readOnly>
                 <label for="tprice">Total Price</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="number" id="uid" name="myUser.u_id" class="form-control" value="${sessionScope.user_dtls.u_id}" required="required" autofocus="autofocus">
+                <input type="number" id="uid" name="myUser.u_id" class="form-control" value="${sessionScope.user_dtls.u_id}" required="required" autofocus="autofocus" readOnly>
                 <label for="uid">User Id</label>
               </div>
             </div>
             <div class="form-group">
               <div class="form-label-group">
-                <input type="number" id="vid" name="myVehicle.v_id" class="form-control" value="${sessionScope.vehicle_dtls.v_id}" required="required" autofocus="autofocus">
+                <input type="number" id="vid" name="myVehicle.v_id" class="form-control" value="${sessionScope.vehicle_dtls.v_id}" required="required" autofocus="autofocus" readOnly>
                 <label for="vid">Vehicle Id</label>
               </div>
             </div>

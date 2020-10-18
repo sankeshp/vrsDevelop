@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
 <link href="<spring:url value='/bootstrap/vendor/bootstrap/css/bootstrap.min.css'/>" rel="stylesheet" type="text/css">
 
     <!-- Custom fonts for this template-->
@@ -69,7 +69,7 @@ In Login
           </form>
           <div class="text-center">
             <a class="d-block small mt-3" href="<spring:url value='/main/registration'/>">Register an Account</a>
-            <a class="d-block small" href="userForgotPassword">Forgot Password?</a>
+              <a class="d-block small" href="<spring:url value='/main/login'/>">Forgot Password?</a>
           </div>
         </div>
       </div>

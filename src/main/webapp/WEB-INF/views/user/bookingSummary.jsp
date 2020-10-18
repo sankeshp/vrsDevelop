@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Booking Summary</title>
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/main/navigation.jsp" />
@@ -81,8 +81,8 @@ For a Vehicle ${sessionScope.vehicle_dtls}<br/> --%>
          
           <hr>
           <a href="<spring:url value='/main/home'/>" class="btn btn-primary">Back to home</a><br/>
-           <hr>
-          <a href="<spring:url value='/email/send_mail'/>" class="btn btn-primary">Mail</a><br/>
+<!--            <hr> -->
+<%--           <a href="<spring:url value='/email/send_mail'/>" class="btn btn-primary">Mail</a><br/> --%>
   <hr>
 </div>
 </div>

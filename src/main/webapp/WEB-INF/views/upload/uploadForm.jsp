@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Upload Form</title>
 <link href="<spring:url value='/bootstrap/vendor/bootstrap/css/bootstrap.min.css'/>" rel="stylesheet" type="text/css">
 
     <!-- Custom fonts for this template-->
@@ -19,7 +19,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/main/navigation.jsp" />
-${requestScope.mesg}
+<h3 align="center">${requestScope.mesg}</h3><br/>
 <!-- <form method="post" enctype="multipart/form-data">
 		Choose File to Upload : <input type="file" name="contents" /> <input
 			type="submit"  />

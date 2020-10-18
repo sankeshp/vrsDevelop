@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
  
-<title>Insert title here</title>
+<title>Vehicle List</title>
 <link href="<spring:url value='/bootstrap/css/bootstrap.min.css'/>" type="text/css" rel="stylesheet" />
 <%-- <link href="<spring:url value='css/1-col-portfolio.css'/>" type="text/css" rel="stylesheet" /> --%>
 </head>

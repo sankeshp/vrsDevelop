@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Update User</title>
 </head>
 <body>
 <jsp:include page="/WEB-INF/views/main/navigation.jsp" />

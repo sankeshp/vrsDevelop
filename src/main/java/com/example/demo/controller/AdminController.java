@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -96,7 +97,14 @@ import com.example.demo.service.AdminService;
 		{
 			System.out.println("in process add vendor "+v);
 			//invoke sevice layer method
-			flashMap.addFlashAttribute("mesg", service.registerVehicle(v));
+			try {
+				flashMap.addFlashAttribute("mesg", service.registerVehicle(v));
+				} catch (DataIntegrityViolationException e) {
+					System.out.println("err in controller " + e);
+					flashMap.addFlashAttribute("mesg", "Invalid Data Pls retry ....");
+					return "redirect:/upload/uploadForm?vid=0";
+				}
+			
 			return "redirect:/admin/vehicleDetails";
 		}
 		
