@@ -23,7 +23,7 @@
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
         </button> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav ml-auto">
             
            
@@ -77,7 +77,7 @@
               <a class="nav-link" href="<spring:url value='/main/login'/>">LogIn Here</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" href="<spring:url value='/main/registration'/>">Sign Up Here</a>
+              <a class="nav-link" href="<spring:url value='/main/registration'/>">SignUp Here</a>
             </li>
             </c:if>
              <li class="nav-item">
